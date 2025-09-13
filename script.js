@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY';  // ← Set your real API key if needed (for backend)
+const GEMINI_API_KEY = 'AIzaSyBBaUeZxKA8K32xzfRwlkRlFlU5J1Q4ox0';  // ← Set your real API key if needed (for backend)
 
 const streamSelect = document.getElementById('stream');
 const marksContainer = document.getElementById('marksContainer');

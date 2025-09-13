@@ -1,0 +1,108 @@
+@keyframes colorChange {
+    0% { color: #ff6f61; }
+    25% { color: #6a1b9a; }
+    50% { color: #42a5f5; }
+    75% { color: #00e676; }
+    100% { color: #ff6f61; }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    animation: colorChange 10s infinite linear;
+}
+
+.container {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #6a1b9a;
+    animation: fadeIn 1s ease;
+    box-shadow: 0 0 20px rgba(106, 27, 154, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    animation: colorChange 8s infinite alternate;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #6a1b9a;
+    background-color: #121212;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8e24aa;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #2c2c2c;
+    border-radius: 8px;
+    border: 1px solid #6a1b9a;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #6a1b9a, #00e676, #42a5f5, #ff6f61);
+    background-size: 800% 800%;
+    z-index: -1;
+    animation: gradientAnimation 15s ease infinite;
+    opacity: 0.3;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

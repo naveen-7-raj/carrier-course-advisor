@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Career Course Advisor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Career Course Advisor</h1>
+        <p>Protect your future by choosing the right career path</p>
+
+        <form id="careerForm">
+            <label for="studentName">Full Name:</label>
+            <input type="text" id="studentName" name="studentName" required />
+
+            <label for="stream">Stream (Bio / CS):</label>
+            <select id="stream" name="stream" required>
+                <option value="">Select Stream</option>
+                <option value="bio">Bio</option>
+                <option value="cs">CS</option>
+            </select>
+
+            <div id="marksContainer"></div>
+
+            <label for="interest">Area of Interest:</label>
+            <input type="text" id="interest" name="interest" placeholder="Example: AI, Data Science, Medicine" required />
+
+            <button type="submit">Get Guidance</button>
+        </form>
+
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

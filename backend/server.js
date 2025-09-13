@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY';  // ← Replace with your real API key
+const GEMINI_API_KEY = 'AIzaSyAf0UbkR8Zc6i61fhw6VQtX9O8YErPoxKs';  // ← Replace with your real API key
 
 app.post('/generate-guidance', async (req, res) => {
     try {

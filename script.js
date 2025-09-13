@@ -1,5 +1,3 @@
-const GEMINI_API_KEY = 'AIzaSyBBaUeZxKA8K32xzfRwlkRlFlU5J1Q4ox0';  // ← Set your real API key if needed (for backend)
-
 const streamSelect = document.getElementById('stream');
 const marksContainer = document.getElementById('marksContainer');
 const careerForm = document.getElementById('careerForm');
@@ -50,7 +48,6 @@ careerForm.addEventListener('submit', async (e) => {
     const formData = new FormData(careerForm);
     const data = Object.fromEntries(formData.entries());
 
-    // Validate marks
     const marks = ['bioMarks', 'csMarks', 'physicsMarks', 'chemistryMarks', 'mathMarks'];
     for (let markKey of marks) {
         if (data[markKey]) {
@@ -75,9 +72,7 @@ careerForm.addEventListener('submit', async (e) => {
     try {
         const response = await fetch('http://localhost:3000/generate-guidance', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 prompt: `Student Name: ${data.studentName}
 Stream: ${data.stream}
